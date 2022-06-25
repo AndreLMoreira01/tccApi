@@ -8,33 +8,30 @@ import java.util.Objects;
 public class Jogo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     private String nome;
 
-    public Integer getId() {
+    private String descricao;
+
+    // public List<Usuarios> getUsuarios() {
+    //        return Usuarios;
+    //    }
+    //
+    //    public void setUsuarios(List<usuario> usuarios) {
+    //        this.usuarios = usuarios;
+    //    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
     public String getNome() {
         return nome;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Jogo jogo = (Jogo) o;
-        return id.equals(jogo.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
     }
 
     public void setNome(String nome) {
@@ -49,6 +46,16 @@ public class Jogo {
         this.descricao = descricao;
     }
 
-    private String descricao;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Jogo jogo = (Jogo) o;
+        return id.equals(jogo.id);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }
