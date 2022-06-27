@@ -4,8 +4,9 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name="jogo")
-public class Jogo {
+@Table(name="usuario")
+public class Usuario {
+
     //atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,15 +14,11 @@ public class Jogo {
 
     private String nome;
 
-    private String descricao;
+    private Boolean sexo;
 
-    // public List<Usuarios> getUsuarios() {
-    //        return Usuarios;
-    //    }
-    //
-    //    public void setUsuarios(List<usuario> usuarios) {
-    //        this.usuarios = usuarios;
-    //    }
+    private int idade;
+
+    private String email;
 
     //get's and set's
     public Long getId() {
@@ -40,12 +37,28 @@ public class Jogo {
         this.nome = nome;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public Boolean getSexo() {
+        return sexo;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setSexo(Boolean sexo) {
+        this.sexo = sexo;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     //equals e hash code
@@ -53,12 +66,15 @@ public class Jogo {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Jogo jogo = (Jogo) o;
-        return id.equals(jogo.id);
+        Usuario usuario = (Usuario) o;
+        return id.equals(usuario.id);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    //continuar aqui
+    //achar o erro lá
 }
