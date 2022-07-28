@@ -7,50 +7,45 @@ import java.util.Objects;
 @Table(name="usuario")
 public class Usuario {
 
-    //atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
-    private String nome;
-
-    private Boolean sexo;
-
-    private int idade;
+    private String username;
 
     private String email;
 
-    //get's and set's
-    public Long getId() {
+    private long idade;
+
+    private String senha;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Usuario usuario = (Usuario) o;
+        return id == usuario.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getUsername() {
+        return username;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public Boolean getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(Boolean sexo) {
-        this.sexo = sexo;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -61,20 +56,19 @@ public class Usuario {
         this.email = email;
     }
 
-    //equals e hash code
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Usuario usuario = (Usuario) o;
-        return id.equals(usuario.id);
+    public long getIdade() {
+        return idade;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
+    public void setIdade(long idade) {
+        this.idade = idade;
     }
 
-    //continuar aqui
-    //achar o erro lá
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 }
