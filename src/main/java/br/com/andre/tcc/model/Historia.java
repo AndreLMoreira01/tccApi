@@ -20,6 +20,18 @@ public class Historia {
 
     private String tipo;
 
+    @ManyToOne
+    @JoinColumn(name= "conquista_id")
+    private Conquista conquista;
+
+    public Conquista getConquista() {
+        return conquista;
+    }
+
+    public void setConquista(Conquista conquista) {
+        this.conquista = conquista;
+    }
+
     public long getId() {
         return id;
     }

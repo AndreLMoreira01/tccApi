@@ -1,6 +1,10 @@
 package br.com.andre.tcc.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -17,6 +21,17 @@ public class Conquista {
 
     private String descricao;
 
+    @JsonIgnore
+    @OneToMany(mappedBy = "conquista")
+    private List<Historia> historias = new ArrayList<>();
+
+    public List<Historia> getHistorias() {
+        return historias;
+    }
+
+    public void setHistorias(List<Historia> historias) {
+        this.historias = historias;
+    }
 
     public long getId() {
         return id;
