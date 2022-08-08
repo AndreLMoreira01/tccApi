@@ -30,7 +30,7 @@ public List<Conquista> listarTodasConquistar(){
 
         return conquistaRepository.save(conquistaSalvo);
     }
-    
+
     private Conquista buscarConquistaExistente(Long id) {
         Optional<Conquista> conquistaSalvo = conquistaRepository.findById(id);
         if (!conquistaSalvo.isPresent()){

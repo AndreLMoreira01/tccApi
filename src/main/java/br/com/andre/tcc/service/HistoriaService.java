@@ -15,4 +15,8 @@ public class HistoriaService {
     public List<Historia> listarTodoasHistorias(){
         return historiaRepository.findAll();
     }
+
+    public Historia salvar(Historia historia) {
+        return historiaRepository.save(historia);
+    }
 }
