@@ -1,6 +1,10 @@
 package br.com.andre.tcc.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -20,16 +24,16 @@ public class Historia {
 
     private String tipo;
 
-    @ManyToOne
-    @JoinColumn(name= "conquista_id")
-    private Conquista conquista;
+    @JsonIgnore
+    @OneToMany(mappedBy = "conquista")
+    private List<Historia> historias = new ArrayList<>();
 
-    public Conquista getConquista() {
-        return conquista;
+    public List<Historia> getHistorias() {
+        return historias;
     }
 
-    public void setConquista(Conquista conquista) {
-        this.conquista = conquista;
+    public void setHistorias(List<Historia> historias) {
+        this.historias = historias;
     }
 
     public long getId() {
