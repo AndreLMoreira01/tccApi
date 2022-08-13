@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/conquistas")
-public class ConquistResource {
+public class ConquistaResource {
 
     @Autowired
     private ConquistaRepository conquistaRepository;
