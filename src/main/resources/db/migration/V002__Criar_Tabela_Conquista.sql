@@ -1,7 +1,7 @@
  create table conquista(
-	id_historia Bigint not null primary key auto_increment,
+	id_conquista Bigint not null primary key auto_increment,
 	nome VARCHAR(100),
-	descricao VARCHAR(150),
+	descricao VARCHAR(150)
  );
 
 --cada conquista vale 300 troféus, para dar 1500 no final

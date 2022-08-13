@@ -2,7 +2,7 @@
 	id_historia Bigint not null primary key auto_increment,
 	nome VARCHAR(100),
 	descricao VARCHAR(150),
-	conteudo VARCHAR(250),
+	conteudo VARCHAR(150),
     tipo VARCHAR(15),
     conquista_id int not null
  );
