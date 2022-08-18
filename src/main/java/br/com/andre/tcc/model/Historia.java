@@ -24,8 +24,8 @@ public class Historia {
 
     private String tipo;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "conquista")
+    @ManyToOne
+    @JoinColumn(name= "conquista_id")
     private List<Historia> historias = new ArrayList<>();
 
     public List<Historia> getHistorias() {
