@@ -11,10 +11,9 @@ import java.util.Objects;
 @Table(name="historia")
 public class Historia {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long id_historia;
 
     private String nome;
 
@@ -25,19 +24,15 @@ public class Historia {
     private String tipo;
 
     @ManyToOne
-    @JoinColumn(name= "conquista_id")
-    private List<Historia> historias = new ArrayList<>();
+    @JoinColumn(name = "conquista_id")
+    private Conquista conquista;
 
-    public List<Historia> getHistorias() {
-        return historias;
+    public Conquista getConquista() {
+        return conquista;
     }
 
-    public void setHistorias(List<Historia> historias) {
-        this.historias = historias;
-    }
-
-    public long getId() {
-        return id;
+    public void setConquista(Conquista conquista) {
+        this.conquista = conquista;
     }
 
     @Override
@@ -45,16 +40,20 @@ public class Historia {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Historia historia = (Historia) o;
-        return id == historia.id;
+        return id_historia == historia.id_historia;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(id_historia);
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public long getId_historia() {
+        return id_historia;
+    }
+
+    public void setId_historia(long id_historia) {
+        this.id_historia = id_historia;
     }
 
     public String getNome() {
@@ -88,4 +87,6 @@ public class Historia {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
+
 }

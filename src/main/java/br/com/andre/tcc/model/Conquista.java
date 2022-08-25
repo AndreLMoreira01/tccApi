@@ -9,13 +9,12 @@ import java.util.Objects;
 
 @Entity
 @Table(name="conquista")
-
 public class Conquista {
 
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long id_conquista;
 
     private String nome;
 
@@ -33,12 +32,25 @@ public class Conquista {
         this.historias = historias;
     }
 
-    public long getId() {
-        return id;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Conquista conquista = (Conquista) o;
+        return id_conquista == conquista.id_conquista;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    @Override
+    public int hashCode() {
+        return Objects.hash(id_conquista);
+    }
+
+    public long getId_conquista() {
+        return id_conquista;
+    }
+
+    public void setId_conquista(long id_conquista) {
+        this.id_conquista = id_conquista;
     }
 
     public String getNome() {
@@ -57,17 +69,6 @@ public class Conquista {
         this.descricao = descricao;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Conquista conquista = (Conquista) o;
-        return id == conquista.id;
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
 
 }

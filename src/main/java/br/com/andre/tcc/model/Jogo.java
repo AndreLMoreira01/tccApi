@@ -9,35 +9,43 @@ public class Jogo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private long id_jogo;
 
     private String nome;
 
     private String descricao;
 
     @ManyToOne
-    @JoinColumn(name= "conquista_id")
+    @JoinColumn(name = "conquista_id")
     private Conquista conquista;
+
+    public Conquista getConquista() {
+        return conquista;
+    }
+
+    public void setConquista(Conquista conquista) {
+        this.conquista = conquista;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Jogo jogo = (Jogo) o;
-        return id == jogo.id;
+        return id_jogo == jogo.id_jogo;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(id_jogo);
     }
 
-    public long getId() {
-        return id;
+    public long getId_jogo() {
+        return id_jogo;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setId_jogo(long id_jogo) {
+        this.id_jogo = id_jogo;
     }
 
     public String getNome() {
@@ -54,13 +62,5 @@ public class Jogo {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public Conquista getConquista() {
-        return conquista;
-    }
-
-    public void setConquista(Conquista conquista) {
-        this.conquista = conquista;
     }
 }
