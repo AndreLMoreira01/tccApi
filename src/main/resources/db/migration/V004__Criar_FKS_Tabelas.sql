@@ -1,2 +1,0 @@
-ALTER TABLE historia ADD CONSTRAINT fk_historia_conquista FOREIGN KEY(conquista_id) REFERENCES conquista(id);
-ALTER TABLE jogo ADD CONSTRAINT fk_jogo_conquista FOREIGN KEY(conquista_id) REFERENCES conquista(id);
