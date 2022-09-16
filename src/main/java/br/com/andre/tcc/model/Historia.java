@@ -23,6 +23,8 @@ public class Historia {
 
     private String tipo;
 
+    private String imagem;
+
     @ManyToOne
     @JoinColumn(name = "conquista_id")
     private Conquista conquista;
@@ -46,6 +48,14 @@ public class Historia {
     @Override
     public int hashCode() {
         return Objects.hash(id_historia);
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
     public long getId_historia() {
