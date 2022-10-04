@@ -17,6 +17,8 @@ public class Historia {
 
     private String nome;
 
+    private String autor;
+
     private String descricao;
 
     private String conteudo;
@@ -98,5 +100,11 @@ public class Historia {
         this.tipo = tipo;
     }
 
+    public String getAutor() {
+        return autor;
+    }
 
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
 }
