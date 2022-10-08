@@ -5,4 +5,5 @@
     resposta_id int not null
  );
 
- insert into pergunta(pergunta, alternativa_id, resposta_id) values ('Jogo Dos Significados', 1, 1);
+ insert into pergunta(pergunta, alternativa_id, resposta_id) values ('Qual o significado da palavra abaixo? PURPLE', 1, 1);
+
