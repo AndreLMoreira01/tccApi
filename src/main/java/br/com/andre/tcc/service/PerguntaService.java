@@ -15,4 +15,8 @@ public class PerguntaService {
     public List<Pergunta> listarTodasPerguntas(){
         return perguntaRepository.findAll();
     }
+
+    public Pergunta salvar(Pergunta pergunta) {
+        return perguntaRepository.save(pergunta);
+    }
 }
