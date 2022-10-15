@@ -1,9 +1,11 @@
  create table alternativa(
 	id_alternativa Bigint not null primary key auto_increment,
-	pergunta VARCHAR(150),
-    alternativa_id int not null,
-    resposta_id int not null
+	a1 VARCHAR(150),
+	a2 VARCHAR(150),
+	a3 VARCHAR(150),
+	a4 VARCHAR(150)
  );
 
- insert into pergunta(pergunta, alternativa_id, resposta_id) values ('Qual o significado da palavra abaixo? PURPLE', 1, 1);
+ insert into alternativa(a1, a2, a3, a4) values ('1', '2', '3', '4');
+
 
