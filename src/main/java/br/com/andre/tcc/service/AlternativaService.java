@@ -10,7 +10,8 @@ import java.util.List;
 public class AlternativaService {
 
     @Autowired
-    public AlternativaRepository alternativaRepository;
+    private AlternativaRepository alternativaRepository;
 
+    public List<Alternativa> listarTodasAlternativas() { return  alternativaRepository.findAll();}
 
 }
