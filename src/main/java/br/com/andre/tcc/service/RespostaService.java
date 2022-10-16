@@ -19,5 +19,7 @@ public class RespostaService {
         return respostaRepository.findAll();
     }
 
-
+    public Resposta salvar(Resposta resposta) {
+        return respostaRepository.save(resposta);
+    }
 }

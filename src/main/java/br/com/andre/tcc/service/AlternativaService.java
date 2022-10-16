@@ -14,4 +14,8 @@ public class AlternativaService {
 
     public List<Alternativa> listarTodasAlternativas() { return  alternativaRepository.findAll();}
 
+    public Alternativa salvar(Alternativa alternativa) {
+        return alternativaRepository.save(alternativa);
+    }
+
 }

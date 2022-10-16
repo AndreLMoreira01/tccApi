@@ -6,4 +6,5 @@
  );
 
  insert into jogo(nome, descricao, conquista_id) values ('Jogo Dos Significados', 'Desc', 3);
- insert into jogo(nome, descricao, conquista_id) values ('Genius', 'Desc', 4);
+ insert into jogo(nome, descricao, conquista_id) values ('Jogo das Frutas', 'Desc', 4);
+ insert into jogo(nome, descricao, conquista_id) values ('Jogo da Velha', 'Desc', 5);
