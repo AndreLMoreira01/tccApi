@@ -1,5 +1,6 @@
 package br.com.andre.tcc.resource;
 
+
 import br.com.andre.tcc.model.Resposta;
 import br.com.andre.tcc.repository.RespostaRepository;
 import br.com.andre.tcc.service.RespostaService;
@@ -20,6 +21,8 @@ public class RespostaResource {
     @Autowired
     private RespostaRepository respostaRepository;
 
+    @GetMapping("/todos")
+    public List<Resposta> listarTodasRespostas() { return respostaService.listarTodasRespostas(); }
 
 
 }
