@@ -21,21 +21,22 @@ public class AlternativaResource {
     @Autowired
     private AlternativaRepository alternativaRepository;
 
+    @CrossOrigin
     @GetMapping("/todos")
     public List<Alternativa> listarTodasAlternativas() { return alternativaService.listarTodasAlternativas(); }
-
+    @CrossOrigin
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void remover(@PathVariable Long id){
         alternativaRepository.deleteById(id);
     }
-
+    @CrossOrigin
     @GetMapping("/{id}")
     public ResponseEntity<Alternativa> buscarPeloId(@PathVariable Long id){
         Optional<Alternativa> alternativa = alternativaRepository.findById(id);
         return alternativa.isPresent() ? ResponseEntity.ok(alternativa.get()) : ResponseEntity.notFound().build();
     }
-
+    @CrossOrigin
     @PostMapping
     public ResponseEntity<Alternativa> criar(@RequestBody Alternativa alternativa) {
         Alternativa alternativaSalvo = alternativaService.salvar(alternativa);

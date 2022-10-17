@@ -20,21 +20,22 @@ public class PerguntaResource {
 
     @Autowired
     private PerguntaRepository perguntaRepository;
-
+    @CrossOrigin
     @GetMapping("/todos")
     public List<Pergunta> listarTodasPerguntas() { return perguntaService.listarTodasPerguntas(); }
-
+    @CrossOrigin
     @PostMapping
     public ResponseEntity<Pergunta> criar(@RequestBody Pergunta pergunta) {
         Pergunta perguntaSalvo = perguntaService.salvar(pergunta);
         return ResponseEntity.status(HttpStatus.CREATED).body(perguntaSalvo);
     }
+    @CrossOrigin
     @GetMapping("/{id}")
     public ResponseEntity<Pergunta> buscarPeloId(@PathVariable Long id){
         Optional<Pergunta> pergunta = perguntaRepository.findById(id);
         return pergunta.isPresent() ? ResponseEntity.ok(pergunta.get()) : ResponseEntity.notFound().build();
     }
-
+    @CrossOrigin
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void remover(@PathVariable Long id){

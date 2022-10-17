@@ -21,22 +21,22 @@ public class RespostaResource {
 
     @Autowired
     private RespostaRepository respostaRepository;
-
+    @CrossOrigin
     @GetMapping("/todos")
     public List<Resposta> listarTodasRespostas() { return respostaService.listarTodasRespostas(); }
-
+    @CrossOrigin
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void remover(@PathVariable Long id){
         respostaRepository.deleteById(id);
     }
-
+    @CrossOrigin
     @GetMapping("/{id}")
     public ResponseEntity<Resposta> buscarPeloId(@PathVariable Long id){
         Optional<Resposta> resposta = respostaRepository.findById(id);
         return resposta.isPresent() ? ResponseEntity.ok(resposta.get()) : ResponseEntity.notFound().build();
     }
-
+    @CrossOrigin
     @PostMapping
     public ResponseEntity<Resposta> criar(@RequestBody Resposta resposta) {
         Resposta respostaSalvo = respostaService.salvar(resposta);
