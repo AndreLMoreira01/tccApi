@@ -11,7 +11,7 @@ public class Jogo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id_jogo;
 
-    private String nome;
+    private String nomejogo;
 
     private String descricao;
 
@@ -48,12 +48,12 @@ public class Jogo {
         this.id_jogo = id_jogo;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomejogo() {
+        return nomejogo;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomejogo(String nomejogo) {
+        this.nomejogo = nomejogo;
     }
 
     public String getDescricao() {

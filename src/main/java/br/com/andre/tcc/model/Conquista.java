@@ -16,7 +16,7 @@ public class Conquista {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id_conquista;
 
-    private String nome;
+    private String nomeconquista;
 
     private String descricao;
 
@@ -53,12 +53,12 @@ public class Conquista {
         this.id_conquista = id_conquista;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeconquista() {
+        return nomeconquista;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeconquista(String nomeconquista) {
+        this.nomeconquista = nomeconquista;
     }
 
     public String getDescricao() {

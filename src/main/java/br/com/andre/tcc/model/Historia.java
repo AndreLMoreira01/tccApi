@@ -15,7 +15,7 @@ public class Historia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id_historia;
 
-    private String nome;
+    private String nomehistoria;
 
     private String autor;
 
@@ -68,12 +68,12 @@ public class Historia {
         this.id_historia = id_historia;
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomehistoria() {
+        return nomehistoria;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomehistoria(String nomehistoria) {
+        this.nomehistoria = nomehistoria;
     }
 
     public String getDescricao() {
