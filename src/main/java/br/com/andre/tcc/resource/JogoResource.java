@@ -21,21 +21,25 @@ public class JogoResource {
     @Autowired
     private JogoRepository jogoRepository;
 
+    @CrossOrigin
     @GetMapping("/todos")
     public List<Jogo> listarTodosJogos() { return jogoService.listarTodosJogos(); }
 
+    @CrossOrigin
     @PostMapping
     public ResponseEntity<Jogo> criar(@RequestBody Jogo jogo) {
         Jogo jogoSalvo = jogoService.salvar(jogo);
         return ResponseEntity.status(HttpStatus.CREATED).body(jogoSalvo);
     }
 
+    @CrossOrigin
     @GetMapping("/{id}")
     public ResponseEntity<Jogo> buscarPeloId(@PathVariable Long id){
         Optional<Jogo> jogo = jogoRepository.findById(id);
         return jogo.isPresent() ? ResponseEntity.ok(jogo.get()) : ResponseEntity.notFound().build();
     }
 
+    @CrossOrigin
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void remover(@PathVariable Long id){
