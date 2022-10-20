@@ -15,6 +15,8 @@ public class Jogo {
 
     private String descricao;
 
+    private String imagem;
+
     @ManyToOne
     @JoinColumn(name = "conquista_id")
     private Conquista conquista;
@@ -38,6 +40,14 @@ public class Jogo {
     @Override
     public int hashCode() {
         return Objects.hash(id_jogo);
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 
     public long getId_jogo() {
@@ -64,3 +74,4 @@ public class Jogo {
         this.descricao = descricao;
     }
 }
+
