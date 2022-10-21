@@ -17,6 +17,8 @@ public class Jogo {
 
     private String imagem;
 
+    private String rota;
+
     @ManyToOne
     @JoinColumn(name = "conquista_id")
     private Conquista conquista;
@@ -72,6 +74,14 @@ public class Jogo {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getRota() {
+        return rota;
+    }
+
+    public void setRota(String rota) {
+        this.rota = rota;
     }
 }
 
