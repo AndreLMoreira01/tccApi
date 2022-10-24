@@ -10,7 +10,7 @@
  );
 
 insert into historia(nomehistoria, autor, descricao, conteudo, tipo, imagem, conquista_id) values
-('Coraline','Neil Gaiman', 'Um filme de animação stop-motion', 'Enquanto explora sua nova casa à noite, a pequena Coraline descobre uma porta secreta que contém um mundo parecido com o dela, porém melhor em muitas maneiras. Todos têm botões no lugar dos olhos, os pais são carinhosos e os sonhos de Coraline viram realidade por lá. Ela se encanta com essa descoberta, mas logo percebe que segredos estranhos estão em ação: uma outra mãe e o resto de sua família tentam mantê-la eternamente nesse mundo paralelo.', 'Ficção', '../../assets/img/historias/coraline.jpg', 2);
+('Coraline','Neil Gaiman', 'Um filme de animação stop-motion', 'Enquanto explora sua nova casa à noite, a pequena Coraline descobre uma porta secreta que contém um mundo parecido com o dela, porém melhor em muitas maneiras. Todos têm botões no lugar dos olhos, os pais são carinhosos e os sonhos de Coraline viram realidade por lá. Ela se encanta com essa descoberta, mas logo percebe que segredos estranhos estão em ação: uma outra mãe e o resto de sua família tentam mantê-la eternamente nesse mundo paralelo.', 'Histórias infantis', '../../assets/img/historias/coraline.jpg', 2);
 
 insert into historia(nomehistoria, autor, descricao, conteudo, tipo, imagem, conquista_id) values
 ('Dumbo','Dick Huemer', 'Dumbo, baseado num livro de Helen Aberson e Harold Pear', 'Dumbo é um bebê elefante de um circo que nasceu com orelhas enormes. Após ser ridicularizado por seu grupo de amigos, ele se transforma na principal atração de seu circo quando descobre que, usando suas orelhas, é capaz de fazer o que nenhum outro elefante consegue: voar','Histórias infantis', '../../assets/img/historias/dumbo.jpg', 2);
@@ -26,9 +26,6 @@ insert into historia(nomehistoria, autor, descricao, conteudo, tipo, imagem, con
 
 insert into historia(nomehistoria, autor, descricao, conteudo, tipo, imagem, conquista_id) values
 ('Alice no país das Maravilhas', 'Lewis Carroll','“A única forma de chegar ao impossível e acreditar que é possível” Todos nós possuímos sonhos que, à primeira vista, parecem que são impossíveis. Isso porque no começo dispomos de pouca experiência e recursos para encarar tal empreitada','conteudo', 'Histórias clássicas', '../../assets/img/historias/alice.jpg', 2);
-
-insert into historia(nomehistoria, autor, descricao, conteudo, tipo, imagem, conquista_id) values
-('Dumbo','Tim Burton','Dumbo é um bebê elefante de um circo que nasceu com orelhas enormes. Após ser ridicularizado por seu grupo de amigos, ele se transforma na principal atração de seu circo quando descobre que, usando suas orelhas, é capaz de fazer o que nenhum outro elefante consegue: voar.', 'conteudo','Histórias infantis', '../../assets/img/historias/dumbo.jpg', 2);
 
 insert into historia(nomehistoria, autor, descricao, conteudo, tipo, imagem, conquista_id) values
 ('O Pequeno Príncipe','Antoine de Saint-Exupery','O Pequeno Príncipe é uma obra literária do escritor francês Antoine de Saint-Exupéry, que conta a história da amizade entre um homem frustrado por ninguém compreender os seus desenhos, com um principezinho que habita um asteroide no espaço.', 'conteudo','Histórias infantis', '../../assets/img/historias/principe.jpg', 2);
