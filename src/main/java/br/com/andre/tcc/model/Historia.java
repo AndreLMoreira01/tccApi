@@ -13,7 +13,7 @@ public class Historia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id_historia;
+    private long idHistoria;
 
     private String nomehistoria;
 
@@ -44,12 +44,12 @@ public class Historia {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Historia historia = (Historia) o;
-        return id_historia == historia.id_historia;
+        return idHistoria == historia.idHistoria;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id_historia);
+        return Objects.hash(idHistoria);
     }
 
     public String getImagem() {
@@ -61,11 +61,11 @@ public class Historia {
     }
 
     public long getId_historia() {
-        return id_historia;
+        return idHistoria;
     }
 
     public void setId_historia(long id_historia) {
-        this.id_historia = id_historia;
+        this.idHistoria = id_historia;
     }
 
     public String getNomehistoria() {
