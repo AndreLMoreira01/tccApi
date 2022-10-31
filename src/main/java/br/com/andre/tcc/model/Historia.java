@@ -13,7 +13,7 @@ public class Historia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idHistoria;
+    private Long idHistoria;
 
     private String nomehistoria;
 
@@ -60,12 +60,12 @@ public class Historia {
         this.imagem = imagem;
     }
 
-    public long getId_historia() {
+    public Long getIdHistoria() {
         return idHistoria;
     }
 
-    public void setId_historia(long id_historia) {
-        this.idHistoria = id_historia;
+    public void setIdHistoria(Long idHistoria) {
+        this.idHistoria = idHistoria;
     }
 
     public String getNomehistoria() {

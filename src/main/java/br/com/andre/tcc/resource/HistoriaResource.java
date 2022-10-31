@@ -29,6 +29,7 @@ public class HistoriaResource {
         Historia historiaSalvo = historiaService.salvar(historia);
         return ResponseEntity.status(HttpStatus.CREATED).body(historiaSalvo);
     }
+
     @CrossOrigin
     @GetMapping("/{id}")
     public ResponseEntity<Historia> buscarPeloId(@PathVariable Long id){
