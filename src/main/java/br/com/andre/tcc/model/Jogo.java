@@ -9,7 +9,7 @@ public class Jogo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id_jogo;
+    private Long id_jogo;
 
     private String nomejogo;
 
@@ -56,7 +56,7 @@ public class Jogo {
         return id_jogo;
     }
 
-    public void setId_jogo(long id_jogo) {
+    public void setId_jogo(Long id_jogo) {
         this.id_jogo = id_jogo;
     }
 

@@ -20,9 +20,11 @@ public class HistoriaResource {
 
     @Autowired
     private HistoriaRepository historiaRepository;
+
     @CrossOrigin
     @GetMapping("/todos")
     public List<Historia> listarTodasHistorias() { return historiaService.listarTodoasHistorias(); }
+
     @CrossOrigin
     @PostMapping
     public ResponseEntity<Historia> criar(@RequestBody Historia historia) {

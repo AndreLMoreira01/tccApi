@@ -13,7 +13,7 @@ public class Historia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idHistoria;
+    private Long id;
 
     private String nomehistoria;
 
@@ -39,33 +39,12 @@ public class Historia {
         this.conquista = conquista;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Historia historia = (Historia) o;
-        return idHistoria == historia.idHistoria;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(idHistoria);
-    }
-
     public String getImagem() {
         return imagem;
     }
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
-    }
-
-    public Long getIdHistoria() {
-        return idHistoria;
-    }
-
-    public void setIdHistoria(Long idHistoria) {
-        this.idHistoria = idHistoria;
     }
 
     public String getNomehistoria() {
@@ -106,5 +85,26 @@ public class Historia {
 
     public void setAutor(String autor) {
         this.autor = autor;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Historia historia = (Historia) o;
+        return id.equals(historia.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

@@ -1,5 +1,5 @@
  create table historia(
-	id_historia Bigint not null primary key auto_increment,
+	id Bigint not null primary key auto_increment,
 	nomehistoria VARCHAR(100),
 	autor VARCHAR(100),
 	descricao VARCHAR(800),

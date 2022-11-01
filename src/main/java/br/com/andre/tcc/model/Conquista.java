@@ -14,7 +14,7 @@ public class Conquista {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id_conquista;
+    private Long id_conquista;
 
     private String nomeconquista;
 
@@ -49,7 +49,7 @@ public class Conquista {
         return id_conquista;
     }
 
-    public void setId_conquista(long id_conquista) {
+    public void setId_conquista(Long id_conquista) {
         this.id_conquista = id_conquista;
     }
 
