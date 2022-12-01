@@ -19,6 +19,16 @@ public class Jogo {
 
     private String rota;
 
+    private String conquistad;
+
+    public String getConquistad() {
+        return conquistad;
+    }
+
+    public void setConquistad(String conquistad) {
+        this.conquistad = conquistad;
+    }
+
     @ManyToOne
     @JoinColumn(name = "conquista_id")
     private Conquista conquista;
